@@ -1,0 +1,75 @@
+<main>
+  <div class="wrapper">
+    <div class="header">
+      <h1>My phone book!</h1>
+    </div>
+    <div class="container">
+      <label for="search">
+        <input type="text" class="inputText" placeholder="search text go here" [(ngModel)]="searchText">
+        <button class="closeBtn" (click)="clear()">x</button>
+      </label>
+      <button (click)="addContact()" class="button">add phone</button>
+    </div>
+
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First name
+              <button (click)="changeSort('asc')"><i class="uil uil-angle-up"></i></button>
+              <button (click)="changeSort('desc')"><i class="uil uil-angle-down"></i></button>
+            </th>
+            <th>Last name
+              <button (click)="changeSortLastName('asc')"><i class="uil uil-angle-up"></i></button>
+              <button (click)="changeSortLastName('desc')"><i class="uil uil-angle-down"></i></button>
+            </th>
+            <th>Number
+              <button (click)="changeSortNumber('asc')"><i class="uil uil-angle-up"></i></button>
+              <button (click)="changeSortNumber('desc')"><i class="uil uil-angle-down"></i></button>
+            </th>
+            <th>Edit</th>
+            <th>delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let item of phoneBook | search:searchText | sort:type | Sort2Pipe:type2 | Sort3Pipe:type3; index as i">
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td>{{item.number}}</td>
+            <td>
+              <button class="editBtn" (click)="editContact(i)">
+                edit
+              </button>
+            </td>
+            <td>
+              <button class="deleteBtn" (click)="deleteContact(i)">
+                delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="modalContainer" *ngIf="isModal" (click)="clickOverlay($event)">
+      <div class="modal">
+        <h3>Add phone</h3>
+        <button class="closeBtn close" (click)="closeModal()">x</button>
+      </div>
+      <div class="modalText">
+        <input type="text" class="inputField" placeholder="first name goes here" [(ngModel)]="newContact.firstName"
+          [ngClass]="{'inputWrong': inputWrong.firstName}">
+        <input type="text" class="inputField" placeholder="last name goes here" [(ngModel)]="newContact.lastName"
+          [ngClass]="{'inputWrong': inputWrong.lastName}">
+        <input type="text" class="inputField" placeholder="number phone goes here" [(ngModel)]="newContact.number"
+          [ngClass]="{'inputWrong': inputWrong.number}">
+      </div>
+      <div class="modalFooter">
+        <button class="saveBtn" (click)="saveContact()">Save</button>
+      </div>
+    </div>
+  </div>
+
+</main>

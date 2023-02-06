@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f9f6f6;
+}
+
+.main {
+  padding: 0 60px;
+}
+
+.wrapper {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 100px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+}
+
+h1 {
+  color: red;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.inputText {
+  width: 600px;
+  height: 40px;
+  border: 1px solid rgb(167, 164, 160);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+label {
+  margin: 20px;
+}
+
+.button {
+  width: 200px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  background: rgb(14, 170, 58);
+  border: 1px solid rgb(16, 205, 123);
+  border-radius: 4px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.closeBtn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+}
+
+.sortBtn {
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px rgb(9, 242, 32);
+}
+
+input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+table {
+  width: 80%;
+  margin: 6px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  border-collapse: collapse;
+  margin-left: 20px;
+}
+
+th,
+td {
+  min-width: 100px;
+  height: 40px;
+  text-align: left;
+  margin: 20px;
+}
+
+tr {
+  height: 64px;
+  margin: 20px;
+}
+
+.editBtn {
+  width: 40px;
+  height: 40px;
+  color: rgb(10, 9, 9);
+  text-align: center;
+  background: rgb(231, 209, 13);
+  border: 1px solid rgb(235, 202, 14);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  width: 70px;
+  height: 40px;
+  color: rgb(248, 246, 246);
+  text-align: center;
+  background: rgb(241, 62, 12);
+  border: 1px solid rgb(241, 62, 12);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  background-color: rgb(223, 181, 13);
+}
+
+.deleteBtn:hover {
+  background-color: rgb(151, 14, 42);
+}
+
+.modalContainer {
+  width: 400px;
+  height: 300px;
+  background-color: #f2f9fe;
+  border: 1px solid rgb(203, 203, 206);
+  border-radius: 3px;
+  display: inline-block;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  right: 0;
+  bottom: 0;
+}
+
+.modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputField {
+  width: 360px;
+  height: 40px;
+  border: 1px solid rgb(221, 220, 219);
+  border-radius: 4px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.saveBtn {
+  width: 60px;
+  height: 40px;
+  color: rgb(246, 242, 242);
+  text-align: center;
+  background: rgb(88, 71, 243);
+  border: 1px solid rgb(125, 136, 241);
+  border-radius: 4px;
+  margin-left: 300px;
+  cursor: pointer;
+}
+
+.inputWrong {
+  border: 1px solid red;
+}
+
+.uil {
+  width: 30px;
+  color: black;
+  border: none;
+}
+
+.close {
+  color: black;
+  margin-left: 360px;
+}
